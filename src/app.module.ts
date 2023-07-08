@@ -2,24 +2,24 @@ import { Module } from '@nestjs/common';
 import {
   AppController,
   ProductController,
-  ClientController
+  CustomerController
 } from './controllers';
 import { DataServicesModule } from './services/data-services/data-services.module';
 import { CrmServicesModule } from './services/crm-services/crm-services.module';
 import { ProductUseCasesModule } from './use-cases/product/product-use-cases.module';
-import { ClientUseCasesModule } from 'src/use-cases/client/client-use-cases.module'
+import { CustomerUseCasesModule } from 'src/use-cases/customer/customer-use-cases.module'
 
 @Module({
   imports: [
     DataServicesModule,
     ProductUseCasesModule,
-    ClientUseCasesModule,
+    CustomerUseCasesModule,
     CrmServicesModule,
   ],
   controllers: [
     AppController,
     ProductController,
-    ClientController
+    CustomerController
   ],
   providers: [],
 })
