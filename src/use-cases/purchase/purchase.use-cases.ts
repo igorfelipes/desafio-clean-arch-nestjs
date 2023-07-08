@@ -17,4 +17,8 @@ export class PurchaseUseCases {
     return this.dataServices.purchases.createPurchase(purchase);
   }
 
+  getSoldProducts(): Promise<any> {
+    return this.dataServices.purchases.getSoldProducts();
+  }
+
 }

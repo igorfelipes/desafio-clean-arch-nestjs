@@ -8,7 +8,7 @@ export class PurchaseFactoryService {
     const newPurchase = new Purchase();
 		newPurchase.customerId = createPurchaseDto.customerId;
 		newPurchase.productId = createPurchaseDto.productId;
-		newPurchase.quantity = createPurchaseDto.quantity;
+		// newPurchase.quantity = createPurchaseDto.quantity;
 
     return newPurchase;
   }

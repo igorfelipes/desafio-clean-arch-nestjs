@@ -34,7 +34,7 @@ describe('PurchaseUseCases', () => {
         quantity: 2,
       };
       const createdPurchase: Purchase = {
-        id: 1,
+        id: '1',
         customerId: createPurchaseDto.customerId,
         productId: createPurchaseDto.productId,
         quantity: createPurchaseDto.quantity,

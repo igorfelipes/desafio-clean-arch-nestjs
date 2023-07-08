@@ -15,4 +15,9 @@ export class PurchaseController {
     return this.purchaseUseCases.createPurchase(purchaseDto);
   }
 
+  @Get('sold-products')
+  async getSoldProducts() {
+    return this.purchaseUseCases.getSoldProducts();
+  }
+
 }

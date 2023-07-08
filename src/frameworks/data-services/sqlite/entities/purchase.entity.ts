@@ -4,7 +4,7 @@ import { Column, Entity, Generated, PrimaryColumn } from 'typeorm'
 export class Purchase {
   @PrimaryColumn()
   @Generated('uuid')
-	id: number
+	id: string
 
 	@Column()
 	customerId: number

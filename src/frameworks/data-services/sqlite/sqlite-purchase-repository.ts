@@ -10,4 +10,7 @@ export class SqlitePurchaseRepository implements IPurchaseRepository<Purchase> {
 	createPurchase(purchase: Purchase): Promise<Purchase> {
 		return this._repository.save(purchase)
 	}
+	getSoldProducts(): Promise<any> {
+		return Promise.resolve([])
+	}
 }
