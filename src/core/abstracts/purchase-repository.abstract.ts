@@ -1,9 +1,7 @@
-// export abstract class IPurchaseRepository<T> {
-// 	abstract getSoldProducts(): Promise<T[]>;
+export abstract class IPurchaseRepository<Purchase> {
+	abstract createPurchase(purchase: Purchase): Promise<Purchase>;
+	// abstract getSoldProducts(): Promise<T[]>;
 
-// 	abstract getClientPurchasedProduct(id: string): Promise<Purchase>;
+	// abstract getClientPurchasedProduct(id: string): Promise<Purchase>;
 
-// 	abstract create(item: Purchase): Promise<Purchase>;
-
-// 	abstract update(id: string, item: Purchase);
-// }
+}

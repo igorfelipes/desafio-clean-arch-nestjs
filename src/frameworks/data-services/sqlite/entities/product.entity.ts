@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable } from 'typeorm';
+import { Customer } from './customer.entity';
 
 @Entity()
 export class Product {
@@ -13,4 +14,8 @@ export class Product {
 
   @Column()
   description: string;
+
+  @ManyToMany(() => Customer, { cascade: true })
+  @JoinTable({ name: 'purchase', joinColumn: { name: 'productId' }, inverseJoinColumn: { name: 'customerId' } })
+  customers: Customer[];
 }
